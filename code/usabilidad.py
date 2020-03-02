@@ -11,13 +11,12 @@ class robot_usabilidad(Robot):
         super().__init__(DRIVER_PATH,default_download_dir)
         self.tipos_preguntas = ["match", "calculated", "multianswer", "multichoice", "truefalse"]
 
-        logs_recalificacion_preguntas = [ "\n [-3] No ha sido posible crear el directorio temporal | EXCEPTION:  ",#6
-                "\n [3] Respuestas encontradas satisfactoriamente  ",#7
-                "\n [-5] Fallo al encontrar el tipo al que pertenece la pregunta | EXCEPTION: ",#8
-                "\n [5] tipo al que pertenece la pregunta encontrados satisfactoriamente",#9
-                "\n [-6] Fallo al recorrer preguntas del curso: ",#10
-                "\n [6] pregunta a tratar: ",#11
-                "\n [7] preguntatratada satisfactoriamente "]#11
+        logs_recalificacion_preguntas = [ "\n [-3] Fallo en encontrar los registros | Exception: ",#6
+                                          "\n [-5] Fallo al encontrar botón de descargar | Exception: ",#7
+                                          "\n [-6] Fallo al descargar el archivo del curso: | Exception: ",#8
+                                          "\n [3] Registros encontrados correctamente ",#9
+                                          "\n [5] Botón de descarga encontrado correctamente ",#10
+                                          "\n [6] Archivo descargado correctamente "]#11
 
         # LOGS en Robot tiene un tamaño de 6 logs
         # el primero que se añada a: logs_recalificacion_preguntas
@@ -34,36 +33,42 @@ class robot_usabilidad(Robot):
         contador = variables_de_control[1]
         curso = datos[0][contador]
 
-        # Encontramos los registros
-        self.driver.find_element_by_xpath("//*[contains(text(),'Informes')]").click()
-        self.driver.find_element_by_xpath(".//*[contains(text(),'Registros')]").click()
-        self.driver.find_element_by_xpath("//input[@value='Conseguir estos registros']").click()
+        try: 
+            # Encontramos los registros
+            self.driver.find_element_by_xpath("//*[contains(text(),'Informes')]").click()
+            self.driver.find_element_by_xpath(".//*[contains(text(),'Registros')]").click()
+            self.driver.find_element_by_xpath("//input[@value='Conseguir estos registros']").click()
         
-        #Descagamos los registros
-        self.driver.find_element_by_xpath("*//label[contains(text(),'Descargar datos de tabla como')]").location_once_scrolled_into_view
-        descargar = self.driver.find_element_by_xpath("//input[@value='Descargar']")
-        descargar.find_element_by_xpath("..").location_once_scrolled_into_view
-        self.driver.find_element_by_css_selector('body').send_keys(Keys.UP)
-        time.sleep(1)
-        descargar.click()
-        time.sleep(1)
-        lista_archivos_nueva = set(os.listdir(self.default_download_dir))
+            self.log += self._LOGS[9]
+            try:
+                #Descagamos los registros
+                self.driver.find_element_by_xpath("*//label[contains(text(),'Descargar datos de tabla como')]").location_once_scrolled_into_view
+                descargar = self.driver.find_element_by_xpath("//input[@value='Descargar']")
+                descargar.find_element_by_xpath("..").location_once_scrolled_into_view
+                self.driver.find_element_by_css_selector('body').send_keys(Keys.UP)
+                self.log += self._LOGS[10]
+                try: 
+
+                    time.sleep(1)
+                    descargar.click()
+                    time.sleep(1)
+                    lista_archivos_nueva = set(os.listdir(self.default_download_dir))
 
 
-        lista_archivos_nueva = set(os.listdir(self.default_download_dir))
-        nuevo_acrchivo = list(lista_archivos_nueva-lista_archivos_anterior)
-        nuevo_acrchivo = nuevo_acrchivo[0]
+                    lista_archivos_nueva = set(os.listdir(self.default_download_dir))
+                    nuevo_acrchivo = list(lista_archivos_nueva-lista_archivos_anterior)
+                    nuevo_acrchivo = nuevo_acrchivo[0]
 
-        os.rename(self.default_download_dir+'/'+nuevo_acrchivo, self.default_download_dir+'/'+str(curso)+'.csv')
-
+                    os.rename(self.default_download_dir+'/'+nuevo_acrchivo, self.default_download_dir+'/'+str(curso)+'.csv')
+                    self.log += self._LOGS[11]
+                except Exception as e:
+                    self.log += self._LOGS[8] + str(e)
+            except Exception as e:
+                self.log += self._LOGS[7] + str(e)
+        except Exception as e:
+            self.log += self._LOGS[6] + str(e)
 
         #Si no ha saltado alguna excepción, se guarda que fue un curso exitoso
         self.log+=self._LOGS[4]
 
     
-
-
-def eliminar_ultimo_espacio(cadena):
-    while(' ' == cadena[-1]):
-        cadena = cadena[:-1]
-    return cadena

@@ -1,9 +1,18 @@
 Robot LOG: 
 
  [1] Curso a procesar: 12256
- [-4] Error al procesar curso: 12256| EXCEPTION: must be str, not int
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
  [1] Curso a procesar: 12258
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
  [4] Curso terminado satisfactoriamente
  [1] Curso a procesar: 12307
- [-4] Error al procesar curso: 12307| EXCEPTION: must be str, not int
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
 GUI LOG: 

@@ -15,12 +15,14 @@ class robot_usabilidad_gui(robot_gui):
             self.archivo_cargado = True
         
 
-        dir_path = os.path.dirname(os.path.realpath(__file__))
+        try:
+            dir_path = os.path.dirname(os.path.realpath(__file__))
         
-        self.tempDownDir = os.path.join(dir_path, "tempDownDir")
-        if not os.path.exists(self.tempDownDir):
-            os.mkdir(self.tempDownDir)
-            
+            self.tempDownDir = os.path.join(dir_path, "tempDownDir")
+            if not os.path.exists(self.tempDownDir):
+                os.mkdir(self.tempDownDir)
+        except Exception as e:
+            self.log += "\n [-3] No ha sido posible crear el directorio temporal | EXCEPTION:  " + str(e)#5
         self.root.mainloop()
         
 
