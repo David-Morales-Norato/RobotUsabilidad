@@ -9,6 +9,7 @@ from selenium import webdriver
 import time
 import pandas as pd
 import glob
+import os
 
 class Robot(ABC):
     
@@ -113,7 +114,10 @@ class Robot(ABC):
         all_data = pd.DataFrame()
 
         for f in glob.glob(self.download_deafult_path +"/*.csv"):
+            curso = os.path.basename(f).replace(".csv","")
             df = pd.read_csv(f)
+            df.insert(0, "Curso", curso, True) 
+            
             all_data = all_data.append(df,ignore_index=True)
 
         self.datos_recopilados = all_data

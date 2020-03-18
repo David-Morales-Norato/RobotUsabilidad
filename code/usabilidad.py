@@ -51,14 +51,6 @@ class robot_usabilidad(Robot):
                     if(nuevo_archivo == None):
                         self.log += self._LOGS[8]
                     else:
-                        print(nuevo_archivo)
-                        #lista_archivos_nueva = set(os.listdir(self.default_download_dir))
-
-
-                        #lista_archivos_nueva = set(os.listdir(self.default_download_dir))
-                        #nuevo_acrchivo = list(lista_archivos_nueva-lista_archivos_anterior)
-                        #nuevo_acrchivo = nuevo_acrchivo[0]
-
                         os.rename(self.default_download_dir+'/'+nuevo_archivo, self.default_download_dir+'/'+str(curso)+'.csv')
                         self.log += self._LOGS[11]
                 except Exception as e:
@@ -76,6 +68,7 @@ class robot_usabilidad(Robot):
 
     # method to get the downloaded file name
     def getDownLoadedFileName(self,descargar, waitTime = 20):
+        name = None
         descargar.click()
         self.driver.execute_script("window.open()")
         # switch to new tab
@@ -87,26 +80,24 @@ class robot_usabilidad(Robot):
         
         endTime = time.time()+waitTime
         while True:
+            name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
             try:
                 # get downloaded percentage
-                name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
-                print(name)
-
-                # downloadPercentage = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('#progress').value")
-                # # check if downloadPercentage is 100 (otherwise the script will keep waiting)
-                # if downloadPercentage == 100:
-                #     name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
-                #     # return the file name once the download is completed
+                downloadPercentage = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('#progress').value")
+                # check if downloadPercentage is 100 (otherwise the script will keep waiting)
+                if downloadPercentage == 100:
+                    name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
+                    # return the file name once the download is completed
                     
-                #     self.driver.close()
-                #     self.driver.switch_to_window(current_window)
+                    self.driver.close()
+                    self.driver.switch_to_window(current_window)
 
-                return name
+                    return name
             except Exception as e:
                 self.driver.close()
                 self.driver.switch_to_window(current_window)
-                print(e)
-                return None
+                return name
+                
             time.sleep(1)
             if time.time() > endTime:
                 return None

@@ -1,0 +1,65 @@
+Algún contenido ha sido publicado.
+Anotaciones vistas
+Calificación TXT exportada
+Calificación XLS exportada
+Comentario creado
+Curso actualizado
+Curso buscado
+Curso creado
+Curso restaurado
+Curso visto
+El usuario ha aceptado la declaración del envío.
+Elemento creado
+Entrega creada.
+Envío actualizado.
+Envío visto.
+Evento de calendario actualizado
+Evento de calendario borrado
+Evento de calendario creado
+Finalización de actividad de curso actualizada
+Formulario de calificaciones visto
+Formulario de entrega visto.
+Grupo creado
+Ha comenzado el intento
+Informe de calificación de vista simple visto.
+Informe de cuestionario visto
+Informe de estadísticas visto
+Informe de notas de usuario visto
+Informe de participación visto
+Informe de registros visto
+Informe de resumen de notas visto
+Informe del calificador visto
+Informe usuario del curso visto
+Instancia de inscripción creada
+Instancia del módulo del curso visualizada
+Intento de cuestionario visualizado
+Intento del cuestionario eliminado
+Intento del cuestionario revisado
+Intento enviado
+Lista de usuarios vista
+Listado de insignias visto
+Miembro del grupo añadido
+Miembro del grupo eliminado
+Módulo de curso actualizado
+Módulo de curso eliminado
+Módulo de curso visto
+Nombre evento
+Página de edición del cuestionario visitada
+Perfil de usuario visto
+Pregunta calificada manualmente
+Resumen del intento de cuestionario visualizado
+Rol asignado
+Se ha calificado el envío.
+Se ha enviado una entrega
+Se ha visualizado el estado de la entrega.
+Sección de curso actualizado
+Sección del curso creada
+Tema creado
+Tema visto
+Todos los envíos se están descargando.
+Un fichero ha sido subido.
+Un texto en línea ha sido subido.
+Usuario calificado
+Usuario matriculado en curso
+Vista previa del intento iniciada
+Visualización de las Calificaciones

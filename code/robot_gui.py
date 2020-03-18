@@ -166,7 +166,7 @@ class robot_gui():
         self.button_log.config(state="normal")
         self.button_guardar.config(state="normal")
         self.button_guardar_datos.config(state = 'normal')
-        self.label_logs_result.config(text = "Terminado!")
+        self.label_logs_result.config(text = "Terminado! Guarde el archivo con los datos recopilados")
 
         # Cierra el robot y el navegador
         self.cerrar_driver()
@@ -221,7 +221,7 @@ class robot_gui():
 
             robot_datos = self.robot.datos_recopilados
             path_save_file = f.name
-            pd.DataFrame(robot_datos).to_csv(path_save_file, index=False, header=False)
+            pd.DataFrame(robot_datos).to_csv(path_save_file, index=False)
 
                 #Si no existe el archivo crea error
         except Exception as e:
