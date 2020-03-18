@@ -9,7 +9,7 @@ class robot_usabilidad_gui(robot_gui):
         self.root.title("Robot para adquirir datos para de la usabilidad de la plataforma")
 
         if(DEBUG):
-            self.file_path = "/home/david-norato/Documentos/EXPERTIC/historia_por_pregunta/datos/datos_recalificar_todo.xlsx"
+            self.file_path = "/home/david-norato/Documentos/EXPERTIC/usabilidad/datos/datos_usabilidad.xlsx"
             self.input_user_entry.insert(0,"exper-tic")
             self.input_pass_entry.insert(0,"exper-tic")
             self.archivo_cargado = True
@@ -60,15 +60,9 @@ class robot_usabilidad_gui(robot_gui):
 
         cursos_procesados = log.count("[1]")
         cursos_exitosos = log.count("[4]")
-        fallos_camino = log.count("[-2]")
-        cursos_fallidos = log.count("[-4]")
+        cursos_fallidos = log.count("[-6]")
         salida += "Total cursos procesados: "+ str(cursos_procesados) + '\n'
         salida += "Total cursos recorridos exitosamente: "+ str(cursos_exitosos) + '\n'
-        salida += "Total cursos recorridos incorrectamente: "+ str(cursos_fallidos) + '\n'
-        salida += "Total cursos con fallo en el camino a resultados: "+ str(fallos_camino) + '\n'
+        salida += "archivos descargados incorrectamente: "+ str(cursos_fallidos) + '\n'
         
-        preguntas_procesadas = log.count("[2]")
-        preguntas_fallidas = log.count("[-3]")
-        salida += "Total preguntas procesadas: "+ str(preguntas_procesadas) + '\n'
-        salida += "Total preguntas fallidas a procesar: "+ str(preguntas_fallidas) + '\n'
         return salida

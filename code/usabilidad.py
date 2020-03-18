@@ -27,16 +27,13 @@ class robot_usabilidad(Robot):
 
 
     def tratamiento_curso(self,datos, variables_de_control):
-        lista_archivos_anterior = set(os.listdir(self.default_download_dir))
+        #lista_archivos_anterior = set(os.listdir(self.default_download_dir))
 
         #Obtenemos el curso que estamos tratando para nombrar los archivos
         contador = variables_de_control[1]
         curso = datos[0][contador]
 
         try: 
-            # Encontramos los registros
-            self.driver.find_element_by_xpath("//*[contains(text(),'Informes')]").click()
-            self.driver.find_element_by_xpath(".//*[contains(text(),'Registros')]").click()
             self.driver.find_element_by_xpath("//input[@value='Conseguir estos registros']").click()
         
             self.log += self._LOGS[9]
@@ -50,17 +47,20 @@ class robot_usabilidad(Robot):
                 try: 
 
                     time.sleep(1)
-                    descargar.click()
-                    time.sleep(1)
-                    lista_archivos_nueva = set(os.listdir(self.default_download_dir))
+                    nuevo_archivo = self.getDownLoadedFileName(descargar)
+                    if(nuevo_archivo == None):
+                        self.log += self._LOGS[8]
+                    else:
+                        print(nuevo_archivo)
+                        #lista_archivos_nueva = set(os.listdir(self.default_download_dir))
 
 
-                    lista_archivos_nueva = set(os.listdir(self.default_download_dir))
-                    nuevo_acrchivo = list(lista_archivos_nueva-lista_archivos_anterior)
-                    nuevo_acrchivo = nuevo_acrchivo[0]
+                        #lista_archivos_nueva = set(os.listdir(self.default_download_dir))
+                        #nuevo_acrchivo = list(lista_archivos_nueva-lista_archivos_anterior)
+                        #nuevo_acrchivo = nuevo_acrchivo[0]
 
-                    os.rename(self.default_download_dir+'/'+nuevo_acrchivo, self.default_download_dir+'/'+str(curso)+'.csv')
-                    self.log += self._LOGS[11]
+                        os.rename(self.default_download_dir+'/'+nuevo_archivo, self.default_download_dir+'/'+str(curso)+'.csv')
+                        self.log += self._LOGS[11]
                 except Exception as e:
                     self.log += self._LOGS[8] + str(e)
             except Exception as e:
@@ -72,3 +72,43 @@ class robot_usabilidad(Robot):
         self.log+=self._LOGS[4]
 
     
+
+
+    # method to get the downloaded file name
+    def getDownLoadedFileName(self,descargar, waitTime = 20):
+        descargar.click()
+        self.driver.execute_script("window.open()")
+        # switch to new tab
+        current_window = self.driver.current_window_handle
+        self.driver.switch_to.window(self.driver.window_handles[-1])
+        # navigate to chrome downloads
+        self.driver.get('chrome://downloads')
+        # define the endTime
+        
+        endTime = time.time()+waitTime
+        while True:
+            try:
+                # get downloaded percentage
+                name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
+                print(name)
+
+                # downloadPercentage = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('#progress').value")
+                # # check if downloadPercentage is 100 (otherwise the script will keep waiting)
+                # if downloadPercentage == 100:
+                #     name = self.driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
+                #     # return the file name once the download is completed
+                    
+                #     self.driver.close()
+                #     self.driver.switch_to_window(current_window)
+
+                return name
+            except Exception as e:
+                self.driver.close()
+                self.driver.switch_to_window(current_window)
+                print(e)
+                return None
+            time.sleep(1)
+            if time.time() > endTime:
+                return None
+                
+        

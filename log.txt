@@ -1,0 +1,323 @@
+Robot LOG: 
+
+ [1] Curso a procesar: 12552
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12255
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12256
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12553
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12257
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12258
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12554
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12259
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12260
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12555
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12261
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12262
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12556
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12263
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12264
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12557
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12265
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12266
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12558
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12267
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12268
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12559
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12269
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12270
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12560
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12271
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12272
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12561
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12273
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12274
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12562
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12275
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12276
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12563
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12277
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12278
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12564
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12279
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12280
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12565
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12281
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12282
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12567
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12283
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12284
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12569
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12285
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12286
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12571
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12287
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12288
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12573
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12289
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12290
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12574
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12291
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12292
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12575
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12293
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12294
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12576
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12295
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12296
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+ [1] Curso a procesar: 12577
+ [3] Registros encontrados correctamente 
+ [5] Botón de descarga encontrado correctamente 
+ [6] Archivo descargado correctamente 
+ [4] Curso terminado satisfactoriamente
+GUI LOG: 

@@ -7,6 +7,8 @@ Coming soon
 from abc import ABC,abstractmethod
 from selenium import webdriver
 import time
+import pandas as pd
+import glob
 
 class Robot(ABC):
     
@@ -14,15 +16,16 @@ class Robot(ABC):
         ## Inicializaciones
 
         # Link que lleva a los cuestionarios, falta el id del curso al final del link
-        self.__QUESTION_LINK = "https://tic.uis.edu.co/ava/mod/quiz/index.php?id="
+        self.__QUESTION_LINK = "https://tic.uis.edu.co/ava/report/log/index.php?id="
         
         self.log = ''
-        if(download_deafult_path == None):
+        self.download_deafult_path = download_deafult_path
+        if(self.download_deafult_path == None):
             # El driver del robot
             self.driver = webdriver.Chrome(executable_path = CHROME_DRIVER_PATH)
         else:
             chromeOptions = webdriver.ChromeOptions()
-            prefs = {"download.default_directory" : download_deafult_path}
+            prefs = {"download.default_directory" : self.download_deafult_path}
             chromeOptions.add_experimental_option("prefs",prefs)
             # El driver del robot
             self.driver = webdriver.Chrome(executable_path = CHROME_DRIVER_PATH, chrome_options=chromeOptions)
@@ -31,12 +34,12 @@ class Robot(ABC):
         self.__autentication_link = 'https://tic.uis.edu.co/ava/login/index_ingreso.php'
 
         # Errores
-        self._LOGS = ["\n [-1] Fallo Al hacer autenticación| EXCEPTION: ",
-                        "\n [1] Curso a procesar: ",
-                        "\n [-2] Error al encontrar la actividad| Exception: ",
-                        "\n [2] Se va a procesar: ",
-                        "\n [4] Curso terminado satisfactoriamente",
-                        "\n [-4] Error al procesar curso: "]
+        self._LOGS = ["\n [-1] Fallo Al hacer autenticación| EXCEPTION: ",#0
+                        "\n [1] Curso a procesar: ",#1
+                        "\n [-2] Error al encontrar la actividad| Exception: ",#2
+                        "\n [2] Se va a procesar: ",#3
+                        "\n [4] Curso terminado satisfactoriamente",#4
+                        "\n [-4] Error al procesar curso: "]#5
 
         self.datos_recopilados = []
 
@@ -75,6 +78,7 @@ class Robot(ABC):
             self.log += self._LOGS[0]+ str(e)
 
     def recorrer_cursos(self,datos, eleccion):
+
         id_cursos = datos[0]
         # Va a indicar el curso actual que se está tratando
         contador = 0
@@ -96,6 +100,7 @@ class Robot(ABC):
                 # Si ocurre un error se guarda el fallo
                 self.log+=self._LOGS[5]+id +"| EXCEPTION: "+ str(e)
 
+        self.pre_procesar_datos()
 
     @abstractmethod
     def tratamiento_curso(self,datos,variables_de_control):
@@ -103,3 +108,12 @@ class Robot(ABC):
         
     def cerrar(self):
         self.driver.quit()
+
+    def pre_procesar_datos(self):
+        all_data = pd.DataFrame()
+
+        for f in glob.glob(self.download_deafult_path +"/*.csv"):
+            df = pd.read_csv(f)
+            all_data = all_data.append(df,ignore_index=True)
+
+        self.datos_recopilados = all_data
