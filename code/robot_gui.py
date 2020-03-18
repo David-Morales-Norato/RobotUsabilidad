@@ -5,7 +5,9 @@ import tkinter as tk
 import tkinter.filedialog
 import os
 from sys import platform
-from sys import maxsize as msBits
+import os
+
+
 
 class robot_gui():
     def __init__(self):
@@ -224,6 +226,14 @@ class robot_gui():
             pd.DataFrame(robot_datos).to_csv(path_save_file, index=False)
 
                 #Si no existe el archivo crea error
+            dir_path = os.path.dirname(os.path.realpath(__file__))
+
+            tempDownDir = os.path.join(dir_path, "tempDownDir")
+            for root, dirs, files in os.walk(tempDownDir, topdown=False):
+                for name in files:
+                    os.remove(os.path.join(root, name))
+                for name in dirs:
+                    os.rmdir(os.path.join(root, name))
         except Exception as e:
             self.log += "|No se pudo guardar el archivo  |Exeption: "+ str(e)
             self.label_logs_result.config(text = "|No se pudo guardar el archivo  |Exeption: "+ str(e))
