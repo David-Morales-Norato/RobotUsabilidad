@@ -2,7 +2,7 @@ from robot_gui import robot_gui, tk
 from usabilidad import robot_usabilidad 
 from leer_usabilidad import leer_datos_usabilidad
 import os
-DEBUG = True
+DEBUG = False
 class robot_usabilidad_gui(robot_gui):
     def __init__(self):
         super().__init__()

@@ -6,7 +6,7 @@ import tkinter.filedialog
 import os
 from sys import platform
 import os
-
+import vlc
 
 
 class robot_gui():
@@ -52,7 +52,7 @@ class robot_gui():
         self.input_user_entry.grid(row = 1, column =1, pady = 20)
 
         #Campo de texto que guarda el input de la contraseña.
-        self.input_pass_entry = tk.Entry(self.frame_left) 
+        self.input_pass_entry = tk.Entry(self.frame_left, show='*') 
         self.input_pass_entry.grid(row = 2, column = 1, pady = 20)
 
         #Label para describir que es importante
@@ -92,15 +92,9 @@ class robot_gui():
 
     def get_path_driver(self):
 
-        carpeta_drivers = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/chromedriver/"
-        if platform == "linux" or platform == "linux2":
-            chrome_driver_path = 'Linux/'
-        elif platform == "darwin":
-            chrome_driver_path = 'OSX/'
-        elif platform == "win32":
-            chrome_driver_path = 'Win32/'
+        carpeta_drivers = os.path.dirname(os.path.abspath(__file__)) + "/files/"
 
-        return carpeta_drivers+ chrome_driver_path+'chromedriver'
+        return carpeta_drivers+'chromedriver'
 
 
     def pre_run(self):
@@ -151,7 +145,7 @@ class robot_gui():
             return
 
         # Autenticación en tic-uis
-        self.robot.autenticacion_tic(self.input_user_entry.get(),self.input_pass_entry.get())
+        #self.robot.autenticacion_tic(self.input_user_entry.get(),self.input_pass_entry.get())
         log = self.robot.log
 
         # Si ha existido algún error en la autenticación
@@ -160,16 +154,18 @@ class robot_gui():
             self.cerrar_driver()
             self.log += log
             self.label_logs_result.config(text = log)
+            self.reproducir_sonido()
+
             return
 
-        self.run_robot_especifico(datos, tipo_tarea)
+        #self.run_robot_especifico(datos, tipo_tarea)
 
         # Activa el botón para ver las estadísticas
         self.button_log.config(state="normal")
         self.button_guardar.config(state="normal")
         self.button_guardar_datos.config(state = 'normal')
         self.label_logs_result.config(text = "Terminado! Guarde el archivo con los datos recopilados")
-
+        self.reproducir_sonido()
         # Cierra el robot y el navegador
         self.cerrar_driver()
         pass
@@ -217,13 +213,13 @@ class robot_gui():
     def save_datos_recopilados(self):
         try:
             # Obtiene el path del archivo selexionado por el usuario
-            f = tkinter.filedialog.asksaveasfile(mode = 'w', defaultextension=".csv")
+            f = tkinter.filedialog.asksaveasfile(mode = 'w', defaultextension=".xlsx")
             if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
                 return
 
             robot_datos = self.robot.datos_recopilados
             path_save_file = f.name
-            pd.DataFrame(robot_datos).to_csv(path_save_file, index=False)
+            pd.DataFrame(robot_datos).to_excel(path_save_file, index = False, header=False)
 
                 #Si no existe el archivo crea error
             dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -254,4 +250,7 @@ class robot_gui():
 
         
 
-
+    def reproducir_sonido(self):
+        path_files = os.path.dirname(os.path.abspath(__file__)) + "/files/bell.wav"
+        p = vlc.MediaPlayer(path_files)
+        p.play()
